@@ -10,3 +10,4 @@
 7. Must support deployment to **Kubernetes**
 8. Must support integration to **Jira**
 ### Non-functional Requirements
+1. The tool must be a **hosted service**, no local hardware/software managements
