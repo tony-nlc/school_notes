@@ -44,4 +44,8 @@
 | **Maintainability**                   | Easy: SaaS model removes server management burden.                                                      | Easy: SaaS (via Bitbucket Pipelines) removes management burden.                                                        | Easy: Simple syntax and preconfigured environments.                                               | Easy: Mitigates the need to set up or provision hardware/servers.           |
 
 ## Recommendation
-I would recommend **GitLab CI** after reviewing the Product Comparison table. It provides a seamless alignment to 
+I would recommend **GitLab CI** after reviewing the Product Comparison table. It provides a seamless alignment to the current requirements.
+
+**Native Integration with Existing Workflow:** Since your team already uses **GitLab.com** for private source code repositories, GitLab CI provides a "unified DevOps platform" experience. It eliminates "tool sprawl" by combining repository management, CI/CD pipelines, and security scanning in a single interface.
+
+**Superior Security for Sensitive Data:** The backend team requires high-level security for credit card transactions and sensitive Python applications. GitLab is designed with **"security built-in, not bolted on,"** offering automated SAST, DAST, dependency scanning, and container scanning that integrate directly into the pipelines. It reports a **13x faster security scanning** rate and **50% faster vulnerability detection** than traditional methods.
