@@ -1,23 +1,23 @@
 ## 1. Requirements Elicitation
 
 ### Functional Requirements
-1. Integrate with **GitLab.com** private repositories for source code triggering
-2. Support Automated UI testing for **React** application
-3. Provide security scanning for **Python**
-4. Provide native static code analysis for **Go** without extra installs
-5. Support **automated deployment** of application into a test environment
-6. Integrate with a **Docker** Container Registry
-7. Support deployment to **Kubernetes**
-8. Support integration to **Jira**
+1. Integrate source code triggers with private repositories hosted by **GitLab.com**  
+2. Facilitate automated user interface testing for application **React**  
+3. Provide **Python** security screening.  
+4. Analyze native static code for **Go** without any additional installs.  
+5. Facilitate the application's **automated deployment** into an evaluation setting  
+6. Connect to a **Docker** Container Registry integration  
+7. Deployment support for **Kubernetes**  
+8. Facilitate the incorporation of Jira
 ### Non-functional Requirements
-1. **SaaS**: The tool is a **hosted service**, no local hardware/software managements
-2. **Authentication**: The tool integrates with internal **LDAP** for **SSO**
-3. **Security**: The tool supports **MFA** for admin access
-4. **Auditability**: The tool provides audit logging to **usage tracking** and **user tracking**
-5. **Cost**: The total going cost of the tool must not exceed **$300 USD** per developer per year
-6. **Support**: The tool offers **technical support** with quick turnaround for critical issues
-7. **Scalability**: The tool supports at least **two** separate Scrum teams with distinct pipelines
-8. **Transparency**: One-time, training and annual cost must be **clearly defined** for the CFO
+1. **SaaS**: The tool is a **hosted service**, meaning it doesn't require any local hardware or software management.
+2. **Authentication**: For **SSO**, the tool connects to internal **LDAP**
+3. **Security**: **MFA** is supported by the tool for administrator access.
+4. **Auditability** The tool offers audit logging to **usage tracking** and **user tracking**. Additionally, it is auditable.
+5. **Cost**: The tool's annual total operating costs cannot surpass **$300 USD** per developer.
+6. **Support**: For urgent problems, the tool provides **technical support** with prompt resolution.
+7. **Scalability**: At least **two** independent Scrum teams with unique processes can be supported by the tool.
+8. **Transparency**: The CFO's yearly, one-time, and training expenses must be **exactly defined**.
 
 ## Product Comparison
 
@@ -43,9 +43,19 @@
 | **Availability**                      | High: Distributed SaaS infrastructure.                                                                  | High: Built-in disaster recovery and **High Availability** (Data Center).                                              | High: Distributed SaaS infrastructure.                                                            | High: Managed AWS service with high uptime guarantees.                      |
 | **Maintainability**                   | Easy: SaaS model removes server management burden.                                                      | Easy: SaaS (via Bitbucket Pipelines) removes management burden.                                                        | Easy: Simple syntax and preconfigured environments.                                               | Easy: Mitigates the need to set up or provision hardware/servers.           |
 
-## Recommendation
-I would recommend **GitLab CI** after reviewing the Product Comparison table. It provides a seamless alignment to the current requirements.
+## Suggestion
+The Product Comparison table led me to suggest **GitLab CI**. It offers a smooth fit with the existing specifications.
 
-**Native Integration with Existing Workflow:** Since your team already uses **GitLab.com** for private source code repositories, GitLab CI provides a "unified DevOps platform" experience. It eliminates "tool sprawl" by combining repository management, CI/CD pipelines, and security scanning in a single interface.
+The process of integrating natively with the current workflow GitLab CI offers a "unified DevOps platform" experience because our team already uses **GitLab.com** for private source code repositories. It removes "tool sprawl" by integrating security scanning, CI/CD pipelines, and repository management into a single interface.
+**Enhanced Protection for Private Information:** High-level security is necessary for sensitive Python apps and credit card transactions, according to the backend team. With its **"security built-in, not bolted on,"** design, GitLab offers automated SAST, DAST, dependency, and container scanning that seamlessly integrates with the pipelines. Compared to conventional techniques, it claims a **50% faster vulnerability detection** and a **13x faster security scanning** rate.
 
-**Superior Security for Sensitive Data:** The backend team requires high-level security for credit card transactions and sensitive Python applications. GitLab is designed with **"security built-in, not bolted on,"** offering automated SAST, DAST, dependency scanning, and container scanning that integrate directly into the pipelines. It reports a **13x faster security scanning** rate and **50% faster vulnerability detection** than traditional methods.
+## Reference
+1. https://squareops.com/blog/jenkins-vs-github-actions-vs-gitlab-ci-2026/
+2. https://appcircle.io/blog/how-to-choose-the-right-mobile-ci-cd-tool-in-2025-a-complete-guide
+3. https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software
+4. https://dev.to/alex_aslam/cicd-for-monorepos-taming-the-beast-with-smart-strategies-3np0
+5. https://aws.amazon.com/codepipeline/
+6. https://www.atlassian.com/software/bamboo
+7. https://www.ida.liu.se/~TDDE41/exam/examples/poster_1.pdf
+8. https://about.gitlab.com/
+9. https://www.travis-ci.com/
