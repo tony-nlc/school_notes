@@ -56,3 +56,9 @@ automatically try common variations like:
 Q13. ![[Pasted image 20260216173951.png]]
 
 Q14.
+The `-a` flag stands for Attack Mode.
+
+- `-a 6` is the Hybrid Dict + Mask mode.
+
+Q15.
+![[Pasted image 20260216233129.png]]
