@@ -24,6 +24,7 @@ Q7.
 | Speed   | Slow          | Fast           |
 | Stealth | Low           | High           |
 
+Q8. 
 
 
 
