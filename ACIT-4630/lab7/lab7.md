@@ -24,7 +24,10 @@ Q7.
 | Speed   | Slow          | Fast           |
 | Stealth | Low           | High           |
 
-Q8. 
+Q.8
+
+1. Increase Password Entropy: Using long, complex passwords (passphrases) ensures they won't be in a common dictionary like `rockyou.txt` and would take centuries to brute-force.
+2. Key Stretching (Salting and Hashing): Use modern algorithms like Argon2 or bcrypt with high "cost factors." This forces the computer to do more work for every single guess, slowing the attacker down from millions of guesses per second to just a few.
 
 
 
