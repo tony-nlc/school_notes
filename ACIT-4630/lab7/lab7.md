@@ -45,3 +45,11 @@ It is still a dictionary attack.
 Q11.
 ![[Pasted image 20260216165723.png]]
 
+Q12. 
+It applies different variation of password
+automatically try common variations like:
+
+- **Capitalization:** `Password`
+- **Leet-speak:** `p4ssword`
+- **Duplication:** `passwordpassword`
+- **Common symbols:** `password!`
