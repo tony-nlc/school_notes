@@ -53,3 +53,7 @@ automatically try common variations like:
 - **Leet-speak:** `p4ssword`
 - **Duplication:** `passwordpassword`
 - **Common symbols:** `password!`
+
+Q13. ![[Pasted image 20260216171836.png]]
+
+Q14.
