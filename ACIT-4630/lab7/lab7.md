@@ -19,4 +19,11 @@ This is a dictionary attack because we have a predefined list.
 
 Q7. 
 
+| Feature | Online Attack | Offline Attack |
+| ------- | ------------- | -------------- |
+| Speed   | Slow          | Fast           |
+| Stealth | Low           | High           |
+
+
+
 
