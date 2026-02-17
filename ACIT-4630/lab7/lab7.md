@@ -11,3 +11,7 @@ $oldoffice$1*b405d2e0bef836cd538b96de63d64cfd*7c33fab607ed148ae5f2ca3ee8ca4c0b*e
 ```
 
 
+![[Pasted image 20260216161021.png]]
+
+
+
