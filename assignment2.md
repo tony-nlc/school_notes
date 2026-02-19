@@ -10,4 +10,9 @@ Even if the prefix is exactly 64 bytes, the tool may still append a full **64-by
 
 **No.** Most of the 128 bytes are identical. Only a few specific bytes (typically around 2–6 bytes) will differ between `out1.bin` and `out2.bin`. These precise differences are engineered to "cancel out" during the MD5 compression process.
 
-Task2. 
+### Task 1
+![[Pasted image 20260218171519.png]]
+
+
+### Task 2
+![[Pasted image 20260218171612.png]]
