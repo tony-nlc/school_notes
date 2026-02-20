@@ -16,6 +16,5 @@ terraform apply
 3. Update the `playbook.yml` and run the following command
 ```
 ansible-playbook playbook.yml --syntax-check
-ansible-playbook playbook.yml --check
-
+ansible-playbook playbook.yml
 ```
