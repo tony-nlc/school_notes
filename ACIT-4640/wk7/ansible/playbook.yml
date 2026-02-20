@@ -1,0 +1,32 @@
+- name: Configure web servers
+  hosts: all # Selects all hosts in inventory
+  become: yes # Become SUDO (elevated)
+  tasks:
+    - name: Install nginx
+      ansible.builtin.package:
+        name: nginx # Specifies nginx package
+        state: present # Specfies to install
+        update_cache: yes # Essentially sudo apt update -y
+    - name: create directory structure for web documents
+      ansible.builtin.file:
+        path: /web/html
+        state: directory
+        recurse: yes # Creates all directories in path (-p), since we're created nested
+    - name: copy nginx conf file to server
+      ansible.builtin.copy:
+        src: files/nginx.conf
+        dest: /etc/nginx/sites-available/default
+    - name: create link to nginx config file to enable it
+      ansible.builtin.file:
+        src: /etc/nginx/sites-available/default
+        dest: /etc/nginx/sites-enabled/default
+        state: link # Creates a symbolic link file
+    - name: Generate index.html file from template
+      ansible.builtin.template:
+        src: templates/index.html.j2
+        dest: /web/html/index.html
+    - name: reload nginx service
+      ansible.builtin.service:
+        name: nginx
+        state: reloaded # Restart service
+        enabled: yes # Enable service on startup
