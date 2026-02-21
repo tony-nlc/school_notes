@@ -188,17 +188,12 @@ aws sts get-caller-identity
 | --- | --- |
 |     |     |
 
-| Family | Purpose | Examples |
-
-|--------|---------|----------|
-
-| **t** | General purpose | t3.micro, t3.medium |
-
-| **m** | General purpose (bigger) | m5.large, m5.xlarge |
-
-| **c** | Compute optimized | c5.large, c5n.large |
-
-| **r** | Memory optimized | r5.large, r5.xlarge |
+| Family | Purpose                  | Examples            |
+| ------ | ------------------------ | ------------------- |
+| **t**  | General purpose          | t3.micro, t3.medium |
+| **m**  | General purpose (bigger) | m5.large, m5.xlarge |
+| **c**  | Compute optimized        | c5.large, c5n.large |
+| **r**  | Memory optimized         | r5.large, r5.xlarge |
 
 | **i** | Storage optimized | i3.large, i3en.large |
 
