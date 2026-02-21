@@ -184,24 +184,16 @@ aws sts get-caller-identity
 
 ### EC2 Instance Types
 
-|     |     |
-| --- | --- |
-|     |     |
-
-| Family | Purpose                  | Examples            |
-| ------ | ------------------------ | ------------------- |
-| **t**  | General purpose          | t3.micro, t3.medium |
-| **m**  | General purpose (bigger) | m5.large, m5.xlarge |
-| **c**  | Compute optimized        | c5.large, c5n.large |
-| **r**  | Memory optimized         | r5.large, r5.xlarge |
-
-| **i** | Storage optimized | i3.large, i3en.large |
-
-| **g** | GPU optimized | g4dn.xlarge |
-
-| **p** | GPU (general purpose) | p3.2xlarge |
-
-| **hpc** | High performance computing | hpc6a.32xlarge |
+| Family  | Purpose                    | Examples             |
+| ------- | -------------------------- | -------------------- |
+| **t**   | General purpose            | t3.micro, t3.medium  |
+| **m**   | General purpose (bigger)   | m5.large, m5.xlarge  |
+| **c**   | Compute optimized          | c5.large, c5n.large  |
+| **r**   | Memory optimized           | r5.large, r5.xlarge  |
+| **i**   | Storage optimized          | i3.large, i3en.large |
+| **g**   | GPU optimized              | g4dn.xlarge          |
+| **p**   | GPU (general purpose)      | p3.2xlarge           |
+| **hpc** | High performance computing | hpc6a.32xlarge       |
 
   
 
@@ -295,19 +287,13 @@ echo "<h1>Hello from EC2</h1>" > /var/www/html/index.html
 
 ### EBS vs Instance Store
 
-| Feature | EBS | Instance Store |
-
-|---------|-----|----------------|
-
-| Persistence | Yes (separate from instance) | No (tied to instance) |
-
-| Data retained on termination | Yes (if DeleteOnTermination=false) | No |
-
-| Performance | Network attached | Local (faster) |
-
-| Snapshots | Yes | No |
-
-| Resize | Easy | N/A |
+| Feature                      | EBS                                | Instance Store        |
+| ---------------------------- | ---------------------------------- | --------------------- |
+| Persistence                  | Yes (separate from instance)       | No (tied to instance) |
+| Data retained on termination | Yes (if DeleteOnTermination=false) | No                    |
+| Performance                  | Network attached                   | Local (faster)        |
+| Snapshots                    | Yes                                | No                    |
+| Resize                       | Easy                               | N/A                   |
 
   
 
@@ -607,23 +593,15 @@ echo "<h1>Hello from EC2</h1>" > /var/www/html/index.html
 
 ### S3 Storage Classes
 
-| Class | Durability | Availability | Use Case |
-
-|-------|------------|--------------|----------|
-
-| **Standard** | 99.999999999% | 99.99% | Frequent access |
-
-| **IA** | 99.999999999% | 99.9% | Infrequent access |
-
-| **One Zone-IA** | 99.999999999% | 99.5% | Non-critical |
-
-| **Glacier Instant** | 99.999999999% | 99.9% | Archive, < 90 days |
-
-| **Glacier Flexible** | 99.999999999% | 99.99% | Archive, 90+ days |
-
-| **Glacier Deep Archive** | 99.999999999% | 99.99% | Long-term, 180+ days |
-
-| **Intelligent-Tiering** | 99.999999999% | 99.9% | Unknown access patterns |
+| Class                    | Durability    | Availability | Use Case                |
+| ------------------------ | ------------- | ------------ | ----------------------- |
+| **Standard**             | 99.999999999% | 99.99%       | Frequent access         |
+| **IA**                   | 99.999999999% | 99.9%        | Infrequent access       |
+| **One Zone-IA**          | 99.999999999% | 99.5%        | Non-critical            |
+| **Glacier Instant**      | 99.999999999% | 99.9%        | Archive, < 90 days      |
+| **Glacier Flexible**     | 99.999999999% | 99.99%       | Archive, 90+ days       |
+| **Glacier Deep Archive** | 99.999999999% | 99.99%       | Long-term, 180+ days    |
+| **Intelligent-Tiering**  | 99.999999999% | 99.9%        | Unknown access patterns |
 
   
 
@@ -713,17 +691,12 @@ echo "<h1>Hello from EC2</h1>" > /var/www/html/index.html
 
 ### CloudFront vs S3 Cross-Region Replication
 
-| Feature | CloudFront | CRR |
-
-|---------|------------|-----|
-
-| Global | Yes | No (per-region) |
-
-| Files | All in bucket | Only designated |
-
-| Real-time | No (propagation) | Yes |
-
-| Cost | Pay per request | Per request + storage |
+| Feature   | CloudFront       | CRR                   |
+| --------- | ---------------- | --------------------- |
+| Global    | Yes              | No (per-region)       |
+| Files     | All in bucket    | Only designated       |
+| Real-time | No (propagation) | Yes                   |
+| Cost      | Pay per request  | Per request + storage |
 
   
 
@@ -803,19 +776,13 @@ echo "<h1>Hello from EC2</h1>" > /var/www/html/index.html
 
 ### SQS vs SNS
 
-| Feature | SQS | SNS |
-
-|---------|-----|-----|
-
-| Delivery | Pull | Push |
-
-| Persistence | Yes (configurable) | No |
-
-| Consumers | Multiple | Multiple (fanout) |
-
-| Processing | Batch | Real-time |
-
-| Order | FIFO option | FIFO option |
+| Feature     | SQS                | SNS               |
+| ----------- | ------------------ | ----------------- |
+| Delivery    | Pull               | Push              |
+| Persistence | Yes (configurable) | No                |
+| Consumers   | Multiple           | Multiple (fanout) |
+| Processing  | Batch              | Real-time         |
+| Order       | FIFO option        | FIFO option       |
 
   
 
@@ -1121,7 +1088,7 @@ echo "<h1>Hello from EC2</h1>" > /var/www/html/index.html
 
   - Gateway (S3, DynamoDB) - free
 
-  - Interface (other services) - $$$
+  - Interface (other services) - \$\$\$
 
   
 
@@ -1338,9 +1305,3 @@ echo "<h1>Hello from EC2</h1>" > /var/www/html/index.html
 - Read carefully - "NOT", "EXCEPT" questions
 
   
-
----
-
-  
-
-*Good luck with your AWS SAA-C03 exam! 🚀*
