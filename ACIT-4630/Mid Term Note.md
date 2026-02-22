@@ -124,7 +124,6 @@ Export to Sheets
 |**Use Case**|Bulk data / Hard drives|Key Exchange / Digital Signatures|
 |**Algos**|**AES**, DES, 3DES|**RSA**, ECC, Diffie-Hellman|
 
-Export to Sheets
 
 ### Digital Signatures (The Opposite Logic)
 
