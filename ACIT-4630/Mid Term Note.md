@@ -43,10 +43,10 @@ When an attack happens, identify what was lost:
 - **CVSS (Common Vulnerability Scoring System):** The **score** (0-10) of how dangerous it is.
 - **Sources of Vulnerabilities:** 1. **Software Bugs** (bad code) 2. **Misconfigurations** (weak passwords/open ports).
 #### Configuration vulnerabilities
-
+| Action | Description |
+| --- | --- |
 | **Avoid**  | **Default Configuration**                             |
-| ---------- | ----------------------------------------------------- |
-| **Verify** | Device security before network integration**          |
+| **Verify** | **Device security before network integration**          |
 | **Follow** | **Documented security standards and best practices**  |
 | **Choose** | **Secure cryptographic protocols and strong ciphers** |
 | **Apply**  | **The principle of least privilege**                  |
