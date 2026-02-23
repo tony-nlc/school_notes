@@ -22,7 +22,6 @@ When an attack happens, identify what was lost:
 ---
 
 ## 2. Hacker Profiles & Skills
-
 - **White Hat:** Ethical/Legal (Pentesters).
 - **Black Hat:** Malicious/Illegal (Criminals).
 - **Gray Hat:** Hacks without permission but usually without "malice" (e.g., to find a bug).
@@ -31,14 +30,12 @@ When an attack happens, identify what was lost:
 - **State-Sponsored:** Highly funded by a government (APT - Advanced Persistent Threat).
 
 **The Labels:**
-
 - **Red Team:** Offensive (The Attackers).
 - **Blue Team:** Defensive (The Defenders/Detection).
 
 ---
 
 ## 3. Vulnerabilities & Acronyms
-
 - **Zero-Day:** A vulnerability exploited **before** a patch is available.
 - **CVE (Common Vulnerabilities & Exposures):** A list of publicly disclosed cybersecurity bugs (The ID number).
 - **CWE (Common Weakness Enumeration):** The **category** of the flaw (e.g., "Buffer Overflow").
@@ -48,21 +45,18 @@ When an attack happens, identify what was lost:
 ---
 
 ## 4. Malware & Botnets
-
 - **Worm:** Spreads **automatically** across a network (no human help).
 - **Trojan:** Disguised as something useful (e.g., a "free" game).
 - **Ransomware:** Encrypts your data for money.
 - **Rootkit:** Hides at the **Kernel level** (deep OS) to avoid detection.
 
 **Botnets:**
-
 - **Components:** **Botmaster** (Attacker), **Command & Control (C&C)** server, and **Zombies/Bots** (Infected devices).
 - **How they work:** The Botmaster sends a command to the C&C, which pushes the order to thousands of Zombies to launch a DDoS attack.
 
 ---
 
 ## 5. Social Engineering Factors
-
 - **Authority:** "I'm the IT Director, give me your password."
 - **Urgency:** "Your account will be deleted in 5 minutes!"
 - **Scarcity:** "Only 3 reset links left today."
@@ -71,11 +65,8 @@ When an attack happens, identify what was lost:
 ---
 
 ## 6. Backups & Operations
-
 **The 3-Circle Diagram:** The struggle between **Security**, **Functionality**, and **Ease of Use**. If you increase one, the others typically suffer.
-
 **Backup Strategies:**
-
 - **Full:** Everything. **Fastest Restore** (only 1 file needed). **Slowest Backup**.
 - **Incremental:** Changes since _any_ last backup. **Fastest Backup**. **Slowest Restore** (Needs Full + every increment).
 - **Differential:** Changes since the last _Full_. Medium speed for both.
@@ -83,17 +74,13 @@ When an attack happens, identify what was lost:
 ---
 
 ## 7. Cryptography & PKI
-
 ### Comparison Table
-
-|Feature|Symmetric|Asymmetric|
-|---|---|---|
-|**Keys**|**1 Key** (Shared Secret)|**2 Keys** (Public & Private)|
-|**Speed**|**Very Fast**|**Slow**|
-|**Use Case**|Bulk data / Hard drives|Key Exchange / Digital Signatures|
-|**Algos**|**AES**, DES, 3DES|**RSA**, ECC, Diffie-Hellman|
-
-
+| Feature      | Symmetric                 | Asymmetric                        |
+| ------------ | ------------------------- | --------------------------------- |
+| **Keys**     | **1 Key** (Shared Secret) | **2 Keys** (Public & Private)     |
+| **Speed**    | **Very Fast**             | **Slow**                          |
+| **Use Case** | Bulk data / Hard drives   | Key Exchange / Digital Signatures |
+| **Algos**    | **AES**, DES, 3DES        | **RSA**, ECC, Diffie-Hellman      |
 ### Digital Signatures (The Opposite Logic)
 
 - **Encryption:** I use **YOUR Public Key** (Only you can open it).
