@@ -10,14 +10,14 @@ When an attack happens, identify what was lost:
 
 ### STRIDE (The Threats)
 
-|Threat|Violation|Example|
-|---|---|---|
-|**S**poofing|**Authentication**|Faking an identity (IP spoofing, email spoofing).|
-|**T**ampering|**Integrity**|Modifying a file or a packet in transit.|
-|**R**epudiation|**Non-repudiation**|Denying you sent a message because there are no logs.|
-|**I**nformation Disclosure|**Confidentiality**|Leaking private database records.|
-|**D**enial of Service|**Availability**|Crashing a website so legitimate users can't enter.|
-|**E**levation of Privilege|**Authorization**|A standard user gaining Admin/Root access.|
+| Threat                     | Violation           | Example                                               |
+| -------------------------- | ------------------- | ----------------------------------------------------- |
+| **S**poofing               | **Authentication**  | Faking an identity (IP spoofing, email spoofing).     |
+| **T**ampering              | **Integrity**       | Modifying a file or a packet in transit.              |
+| Repudiation                | **Non-repudiation** | Denying you sent a message because there are no logs. |
+| **I**nformation Disclosure | **Confidentiality** | Leaking private database records.                     |
+| **D**enial of Service      | **Availability**    | Crashing a website so legitimate users can't enter.   |
+| **E**levation of Privilege | **Authorization**   | A standard user gaining Admin/Root access.            |
 
 ---
 
