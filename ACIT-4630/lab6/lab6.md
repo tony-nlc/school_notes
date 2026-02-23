@@ -25,4 +25,3 @@
 7. No because CA:FALSE
 8. Until 2036 Feb 8 ![[Pasted image 20260210132027.png]]
 9. Untrusted Root CA
-10. 
