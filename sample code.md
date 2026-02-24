@@ -1,6 +1,5 @@
 ```python
-#
-
+# app.py
 import connexion
 from connexion import NoContent
 import requests
@@ -118,4 +117,30 @@ app.add_api("openapi.yaml",
 if __name__ == "__main__":
     init_scheduler()
     app.run(port=8100)
+```
+
+``` yaml
+# app.conf
+version: 1
+kafka:
+  hostname: localhost
+  port: 9092
+  topic: events [10]
+  
+datastore:
+  filename: data.json
+scheduler:
+    interval: 5
+eventstores:
+  url: http://localhost:8090
+
+version: 1
+eventstore1:
+  url: http://localhost:8090/exercises
+eventstore2:
+  url: http://localhost:8090/meals
+events:
+  hostname: localhost
+  port: 9092
+  topic: events 
 ```
