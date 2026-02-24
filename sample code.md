@@ -119,6 +119,85 @@ if __name__ == "__main__":
     app.run(port=8100)
 ```
 
-``` yaml
-
+```yaml
+openapi: 3.0.0
+info:
+  title: Weather Collection API
+  description: Receives batches of weather events from IoT devices [1, 4]
+  version: 1.0.0
+paths:
+  /weather/temperature:
+    post:
+      summary: Reports a batch of temperature readings [2]
+      operationId: app.report_temperature_readings
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TemperatureReadingBatch'
+      responses:
+        '201':
+          description: Batch successfully received [2]
+        '400':
+          description: Invalid input [2]
+  /weather/precipitation:
+    post:
+      summary: Reports a batch of precipitation readings [5]
+      operationId: app.report_precipitation_readings
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PrecipitationReadingBatch'
+      responses:
+        '201':
+          description: Batch successfully received
+        '400':
+          description: Invalid input
+components:
+  schemas:
+    TemperatureReadingBatch:
+      type: object
+      required: [station_id, station_name, reporting_timestamp, readings]
+      properties:
+        station_id:
+          type: string
+          format: uuid [6]
+        station_name:
+          type: string
+        reporting_timestamp:
+          type: string
+          format: date-time [6]
+        readings:
+          type: array
+          items:
+            type: object
+            properties:
+              temperature_celsius:
+                type: number [7]
+              recorded_timestamp:
+                type: string
+                format: date-time [7]
+    PrecipitationReadingBatch:
+      type: object
+      required: [station_id, station_name, reporting_timestamp, readings]
+      properties:
+        station_id:
+          type: string
+          format: uuid
+        station_name:
+          type: string
+        reporting_timestamp:
+          type: string
+          format: date-time
+        readings:
+          type: array
+          items:
+            type: object
+            properties:
+              precip_mm:
+                type: number
+              recorded_timestamp:
+                type: string
+                format: date-time
 ```
