@@ -22,15 +22,10 @@
 ### IAM (Identity and Access Management)
 
 - **Global service** - applies to all regions
-
 - **Root account** - never use for daily work, enable MFA
-
 - **Users** - physical people, can belong to groups
-
-- **Groups** - containers for users with similar permissions
-
+containers for users with similar permissions
 - **Roles** - for AWS services or cross-account access
-
 - **Policies** - JSON documents defining permissions
 
 ### IAM Policy Structure
@@ -40,27 +35,16 @@
 {
 
   "Version": "2012-10-17",
-
   "Statement": [
-
     {
-
       "Effect": "Allow|Deny",
-
       "Action": ["ec2:Describe*"],
-
       "Resource": "*",
-
       "Condition": {
-
         "IpAddress": {"aws:SourceIp": "10.0.0.0/8"}
-
       }
-
     }
-
   ]
-
 }
 
 ```
@@ -68,17 +52,11 @@
 ### IAM Best Practices
 
 - **Least privilege** - give minimum permissions needed
-
 - **Use IAM roles** for EC2, Lambda, etc.
-
 - **Enable MFA** for root and IAM users
-
 - **Use access keys** for CLI, secret keys for SDK
-
 - **Never share credentials**
-
 - **Rotate credentials** regularly
-
 - **Use IAM Permission Boundaries** to limit max permissions
 
 ### AWS CLI
