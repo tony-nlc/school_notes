@@ -56,7 +56,8 @@ automatically try common variations like:
 - **Duplication:** `passwordpassword`
 - **Common symbols:** `password!`
 
-Q13. ![[Pasted image 20260216173951.png]]
+Q13. 
+![](assets/lab7/file-20260303140218391.png)
 
 Q14.
 The `-a` flag stands for Attack Mode.
