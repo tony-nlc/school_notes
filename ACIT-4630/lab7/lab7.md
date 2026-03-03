@@ -65,7 +65,7 @@ The `-a` flag stands for Attack Mode.
 - `-a 6` is the Hybrid Dict + Mask mode.
 
 Q15.
-![[Pasted image 20260216233129.png]]
+![](assets/lab7/file-20260303140633918.png)
 
 Q16.
 ![[Pasted image 20260216233415.png]]
