@@ -1,5 +1,4 @@
-![[Pasted image 20260216155051.png]]
-
+![](assets/lab7/file-20260303130440857.png)
 Q1. It is consider an online attack because we are send request to a live server over the network.
 
 Q2. This is a dictionary attack because we have a predefined list of password.
