@@ -10,8 +10,8 @@ $oldoffice$1*b405d2e0bef836cd538b96de63d64cfd*7c33fab607ed148ae5f2ca3ee8ca4c0b*e
 ```
 Q4. It would be not be a good choice for brute-force attack because many website has rate limiting and brute force attack requires too much trials
 
-Q5. 
-![[Pasted image 20260216161021.png]]
+Q5.
+![](assets/lab7/file-20260303130927404.png)
 
 Q6. 
 This is a dictionary attack because we have a predefined list.
