@@ -71,6 +71,3 @@ build {
 
   # COMPLETE ME add additional provisioners to run shell scripts and complete any other tasks
 }
-
-
-```
