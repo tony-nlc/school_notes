@@ -126,10 +126,8 @@ resource "aws_instance" "web" {
   key_name               = "aws-4640"
   vpc_security_group_ids = [aws_security_group.web.id]
   subnet_id              = aws_subnet.web.id
-
-  tags = {
-    Name = "Web"
-  }
+  project_name = "Web"
+  
 }
 
 # print public ip and dns to terminal
