@@ -36,3 +36,8 @@ variable "vpc_security_group_ids" {
     description = "vpc_security_group_ids"
     type = list(string)
 }
+
+variable "subnet_id" {
+    description = "Subnet ID"
+    type = string
+}
