@@ -10,10 +10,10 @@ var "aws_instance" "web" {
   }
 }
 
-variable "instance_type" {
-  description = "The type of EC2 Instances to run (e.g. t2.micro)"
-  default = "t3.micro"
-  type        = string
+
+variable "project_name" {
+    description = "Project Name"
+    type = string
 }
 
 variable "ami" {
@@ -21,4 +21,13 @@ variable "ami" {
   type = string
 }
 
-variable "projec
+variable "instance_type" {
+  description = "The type of EC2 Instances to run (e.g. t2.micro)"
+  default = "t3.micro"
+  type        = string
+}
+
+variable "key_name" {
+    description = "Key Name"
+    type = string
+}
