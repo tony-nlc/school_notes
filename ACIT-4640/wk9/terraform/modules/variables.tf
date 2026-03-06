@@ -12,12 +12,13 @@ var "aws_instance" "web" {
 
 variable "instance_type" {
   description = "The type of EC2 Instances to run (e.g. t2.micro)"
-  instance_type = "t3.micro"
   default = "t3.micro"
   type        = string
 }
 
 variable "ami" {
   description = "The AMI id"
-  
+  type = string
 }
+
+variable "projec
