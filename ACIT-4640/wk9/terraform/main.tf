@@ -137,8 +137,9 @@ resource "aws_instance" "web" {
 output "instance_ip_addr" {
   description = "The public IP and dns of the web ec2 instance."
   value = {
-    "public_ip" = aws_instance.web.public_ip
-    "dns_name"  = aws_instance.web.public_dns
+    "public_ip" = module.web.instance_ip_addr
+    "dns_name"  = module.web.instance_dns
+    "instance_id"  = module.web.instance_id
   }
 }
 

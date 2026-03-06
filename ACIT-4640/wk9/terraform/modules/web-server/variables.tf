@@ -1,5 +1,5 @@
 variable "project_name" {
-  description = "A prefix used for naming resources to ensure uniqueness and organization (e.g., 'acme-web-prod')."
+  description = "A prefix used for naming resources to ensure uniqueness and organization."
   type        = string
 }
 
@@ -25,6 +25,6 @@ variable "vpc_security_group_ids" {
 }
 
 variable "subnet_id" {
-  description = "The VPC Subnet ID where the instance will be deployed (e.g., subnet-0123456789abcdef)."
+  description = "The VPC Subnet ID where the instance will be deployed."
   type        = string
 }
