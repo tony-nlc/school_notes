@@ -1,25 +1,47 @@
+### Q1: Who is the issuer of the two certificates?
 
-1. 
-```
-   issuer=C=US, O=DigiCert Inc, CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
-```
-2. 
-```
-01FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF003031300D06096086480165030402010500042015C4308F19FE8024FEBA0F4C09846D413FFF2C2EB7241D981A45FD5A003E839E
-```
-3. ![](assets/README/file-20260310093852288.png)
-4. 
-- **Subject:** The entity being identified (e.g., `www.bcit.ca`).  
-- **Public Key:** The RSA key used for encryption/verification.
-- **Issuer:** The CA that signed the certificate.
-- **Validity Period:** Not Before and Not After dates.
-- **Serial Number:** A unique identifier from the CA.
-- **Extensions:** Usage constraints (e.g., "Server Authentication") and Subject Alternative Names (SAN).
-- **Signature Algorithm:** (e.g., `sha256WithRSAEncryption`).
+- **Certificate 0 (Leaf/Server):** `C=US, O=DigiCert Inc, CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1`
+    
+- **Certificate 1 (Intermediate):** `C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Global Root G2`
+    
 
-3. **Extract the Body:** Obtain the TBS (To-Be-Signed) portion of the certificate.
-4. **Hash the Body:** Use the specified algorithm (SHA-256) to create a digest of that body.
-5. **Get the Signer's Public Key:** Obtain the public key (e,n) from the issuer's certificate.
-6. **Decrypt the Signature:** Use the public key to decrypt the signature attached to the original certificate.
-7. **Compare:** Verify that the decrypted hash matches the hash you calculated in Step 2.
-8. **Check Constraints:** Ensure the current date is within the validity period and the certificate has not been revoked.
+### S1: Decryption and Hash Comparison
+
+Below is the result of the RSA decryption of the CA's signature and the expected structure of the recovered data.
+
+**Decrypted Signature (Hex):**
+
+> `01FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF003031300D06096086480165030402010500042015C4308F19FE8024FEBA0F4C09846D413FFF2C2EB7241D981A45FD5A003E839E`
+
+
+---
+
+### Q2: What data does such a certificate contain?
+
+An X.509 certificate contains the following critical fields:
+
+- **Subject:** The entity being identified (e.g., `*.bcit.ca`).
+- **Public Key:** The RSA key used for encryption or signature verification.
+- **Issuer:** The Certificate Authority (CA) that digitally signed the certificate.
+- **Validity Period:** The "Not Before" and "Not After" dates.
+- **Serial Number:** A unique identifier assigned by the CA.
+- **Extensions:** Additional constraints, such as Subject Alternative Names (SAN) or Key Usage.
+- **Signature Algorithm:** The specific algorithm used (e.g., `sha256WithRSAEncryption`).
+
+---
+
+### Q3: List the steps to manually verify that an X.509 certificate is authentic.
+
+1. **Extract the Body:** Obtain the "To-Be-Signed" (TBS) portion of the certificate.
+2. **Hash the Body:** Use the algorithm specified in the certificate (SHA-256) to create a digest of that body.
+3. **Get the Signer's Public Key:** Retrieve the public key (e,n) from the Issuer’s certificate.
+4. **Decrypt the Signature:** Use the Issuer's public key to decrypt the signature attached to the target certificate.
+5. **Compare Digests:** Ensure the decrypted hash matches the hash calculated in Step 2.
+6. **Check Constraints:** Verify the certificate is not expired and has not been revoked.
+
+---
+
+### Q4: If we only get one certificate, what does it mean? Where would we find the issuer's public key?
+
+- **Meaning:** The server is only sending its "Leaf" certificate. It is failing to provide the "Intermediate" certificates required to complete the chain to a trusted root.
+**Local Trust Store:** If the issuer is a Root CA, its public key is likely already stored in the operating system's trusted root store (e.g., `/etc/ssl/certs` on Linux).****
