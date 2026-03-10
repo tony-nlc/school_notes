@@ -71,3 +71,9 @@ chDYABPPTHPbqjc1qCmBaZx2vN4Ye5DUys/vZwP9BFohFrH/6j/f3IL16/RZkiMN
 JCqVJUzKoZHm1Lesh3Sz8W2jmdv51b2EQJ8HmA==
 -----END CERTIFICATE-----
 ```
+
+1. 
+   ```
+   issuer=C=US, O=DigiCert Inc, CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+   ```
+   2. 
