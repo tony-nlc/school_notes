@@ -1,0 +1,13 @@
+- name: Setup Redis Servers
+  hosts: server_role_redis_server
+  become: true
+  gather_facts: true
+  roles:
+    - redis-role
+
+- name: Setup Frontend Servers
+  hosts: server_role_frontend_server
+  become: true
+  gather_facts: true
+  roles:
+    - frontend-role
